@@ -1,9 +1,9 @@
-var mysql = require('mysql');
+const mysql = require("mysql");
 
-var connection =mysql.createConnection({
+let conexion = mysql.createConnection({
     host: 'localhost',
     port: '3306',
-    user: '',
+    user: 'root',
     password: '',
     database: 'lechuapp'
 });

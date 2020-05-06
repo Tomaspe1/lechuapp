@@ -1,13 +1,13 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const database = require('./dbconnect');
+const express = require("express");
+const bodyParser = require("body-parser");
+const database = require("./dbconnect");
 
-var app = express();
+const app = express();
+const port = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-var puerto = '8060';
-
-app.listen(puerto, function() {
-    console.log("Escuchando pedidos en el puerto " + puerto);
+app.listen(port, function () {
+  console.log(`Escuchando en el puerto ${port}`);
 });
-
